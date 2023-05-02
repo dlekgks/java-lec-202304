@@ -1,6 +1,6 @@
 package day03;
 
-public class Variableexempie {
+public class Variablexample {
 
 	
 	public static void main(String[] args) {
