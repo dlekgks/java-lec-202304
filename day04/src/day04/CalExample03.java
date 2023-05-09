@@ -41,7 +41,6 @@ public class CalExample03 {
 		boolean result9 = result5 ^ result6 || result7 && true;
 		// false ^ (true || false) && true
 
-
 	}
 
 }
