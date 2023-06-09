@@ -24,7 +24,7 @@ public class ThrowsTest {
 		test.showDivide(10, 0);
 		
 		SamsungCalculator cal = new SamsungCalculator();
-		cal.divide(10,2);
+		cal.divided(10,2);
 
 	}
 

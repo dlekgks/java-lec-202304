@@ -1,8 +1,8 @@
 package ext;
 
 import java.io.IOException;
-import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class InputProgram {
 	
@@ -22,25 +22,27 @@ public class InputProgram {
 		String name = "";
 		int age = 0;
 		
+		try {
 		System.out.print("이름을 입력해주세요 :");
 		name = input.next();
 		
 		//예외가 발생할 수 있는 곳
-		try {
+		
 		System.out.print("나이를 입력해주세요 :");
+		age = input.nextInt();
 		
 		if(age > 100) {
 			throw new NotValidNumberException("숫자는 100이하여야 합니다.");
 		}
 		
-		age = input.nextInt(); //여기서 Exception을 던지면
+		//age = input.nextInt(); 여기서 Exception을 던지면
 		} catch(NullPointerException e2) { //여기서 catch하겠다.
-			System.out.print("NullPointerException");
+			System.out.println("NullPointerException");
 		} catch(Exception ex) { 
-		    System.out.print("Exception 다잡아");
-		    System.out.print("예외메세지 :" + ex.getMessage());
+		    System.out.println("Exception 다잡아");
+		    System.out.println("예외메세지 :" + ex.getMessage());
 		} finally {
-			System.out.print("finally 구문 실행");
+			System.out.println("finally 구문 실행");
 		}
 			/* catch(Exception ex) { //모든 Exception의 아버지 클래스 여기서 catch한다.
 		}
@@ -49,7 +51,7 @@ public class InputProgram {
 		
 		
 		
-		System.out.print("저는" + name + "이고요, 나이는" + age + "입니다.");
+		System.out.println("저는" + name + "이고요, 나이는" + age + "입니다.");
 
 	}
 
